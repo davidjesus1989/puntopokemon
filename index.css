@@ -1,0 +1,334 @@
+/*Establece el modelo de la caja "border-box" para todos los elementos*/
+*{
+    box-sizing: border-box;
+    
+}
+
+/*Configuración general del cuerpo*/
+body{
+    font-family:'Roboto', sans-serif;
+    margin: 0;
+}
+
+/*Estilos para los diferentes tamaños de los encabezados y párrafos*/
+h1{ font-size: 3.5em;}
+h2{ font-size: 2.7em;}
+h3{ font-size: 2em;}
+p{ font-size: 1.25em;}
+ul{ list-style: none;}
+li{ font-size: 1.25em;}
+
+/*Estilos para los botones*/
+button{
+    font-size:1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blue;
+}
+
+/*Estilos de diseño al pasar el mouse por encima del botón*/
+button:hover{
+    background-color: rgb(88, 17, 88);
+}
+
+/*Estilos para el contenedor principal*/
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+/*Establece un color del título*/
+.color-acento{color:rgb(218, 218, 1);}
+
+/*Estilos para la sección de encabezado*/
+header{
+    background-color: rgb(106, 141, 255)
+}
+
+/*Estilos para el logotipo del encabezado*/
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    font-size: 3em;
+    color: rgb(218, 218, 1);
+}
+
+/*Diseño para el contendor del encabezado*/
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Estilos para la sección de navegación del menú encabezado*/
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    font-size: 1.5em;
+}
+
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/*Estilos para la sección héroe*/
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/fondopika.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+/*Estilos para la sección Somos Ptopke*/
+#somos-Ptopke .container{
+    text-align: center;
+    padding: 300px 12px;
+
+}
+
+/*Estilos para la sección Nuestras modalidades*/
+#Nuestras-modalidades{
+    background-color: rgb(106, 141, 255);
+    color: white;
+    text-align: center;
+    padding: 5px 12px;
+    height: 125vh;
+}
+
+#Nuestros-modalidades .container{
+    padding: 50px 12px;
+}
+
+#Nuestas-modalidades h2{
+    height: 80vh;
+    margin-top: 0;
+    font-size:  3em; ;
+}
+
+#Nuestras-modalidades p{
+    display: none;
+}
+
+#Nuestras-modalidades .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+    
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/tcgpokemon.jpg"); 
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/pokeunite.jpg");  
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("img/pokego.jpg"); 
+}
+
+/*Estilos para la sección de características*/
+#características .container{
+    text-align: center;
+    padding: 225px 20px;
+    
+}
+
+#características li{
+    margin: 16px 0px;
+    font-weight: bold;
+
+}
+
+/*Estilos para la sección final*/
+#final{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(106, 141, 255);
+    color: white;
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 4em;
+    color: rgb(218, 218, 1);
+}
+
+/*#final button{
+    font-size: 1.75em;
+} */
+
+/*Estilos para el pie de página*/
+footer{
+    background-color: rgb(180,180,180);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(120,120,120);
+    font-size: 0.8em;
+}
+
+footer .container{
+height: 100px;
+display: flex;
+justify-content:center;
+align-items: flex-end;
+}
+
+/*Media queries para pantallas más grandes (minimo 720px)*/
+@media (min-width: 720px){
+header{
+    position:fixed;
+    width: 100%;
+}
+
+header .container{
+        flex-direction: row;
+        justify-content: space-between;
+ }
+
+ header nav{
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 20px;
+ }
+
+ #somos-Ptopke .container{
+    display: flex;
+    justify-content: center;
+}
+
+#somos-Ptopke .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+ #somos-Ptopke .img-container{
+    background-image: url("img/local.webp");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+ }
+
+ #Nuestras-modalidades .programas{
+    display: flex;
+    justify-content: center;
+ }
+
+ #Nuestras-modalidades p{
+    display: block;
+    margin-bottom: 30px;
+ }
+
+ #Nuestras-modalidades h3{
+    margin-top: 0;
+ }
+
+ #Nuestras-modalidades .carta{
+    padding: 50px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+ }
+
+ #características{
+     background-image: url("img/torneotcg.jpg");
+     background-repeat: no-repeat;
+     background-size: 500px 400px;
+     background-position: calc(100vw - 500px) 120px;
+     margin-left: 110px;
+     
+ }
+
+ #características .container{
+    text-align: initial;
+ }
+
+ #características ul{
+    margin-left: 50px;
+ }
+
+
+}
+
+@media (min-width: 1200px){
+ #características{
+    background-position-x: calc(100vw - 800px);
+ }   
+}
+
+/*Para controlar el tamaño de las imágenes en el carrusel */
+.carousel-container {
+    max-width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-image {
+    display: none;
+    width: 100%;
+    max-width: 100%; 
+    height: auto;
+}
+
+/*Estilos de carrusel para dispositivos móviles*/ 
+@media screen and (max-width: 720px) {
+.carousel-image {
+     max-width: 100%;
+       
+    }
+}
